@@ -1,0 +1,123 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f8fafc 0%, #ffe0f0 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.container {
+    border: none;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15), 0 1.5px 3px rgba(255,192,203,0.2);
+    height: 340px;
+    width: 210px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.97);
+    padding: 16px 12px 12px 12px;
+}
+
+.result {
+    border: none;
+    width: 100%;
+    height: 60px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    margin-bottom: 14px;
+    background: #f9f9f9;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    font-size: 2rem;
+    color: #333;
+    text-align: right;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+}
+
+.row {
+    display: flex;
+    flex: 1;
+    border-radius: 12px;
+    gap: 8px;
+}
+
+.numbers {
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0;
+    width: 140px;
+    height: 230px;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.oprators {
+    width: 48px;
+    height: 230px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.btn, .btn1 {
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: #ffe0f0;
+    color: #d72660;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+    outline: none;
+}
+
+.btn:hover, .btn1:hover {
+    background: #d72660;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(215,38,96,0.15);
+}
+
+.btn1 {
+    background: #f5f5f5;
+    color: #3c3c3c;
+    font-weight: bold;
+}
+
+.btn1:hover {
+    background: #b2f7ef;
+    color: #222;
+}
+
+@media (max-width: 500px) {
+    .container {
+        width: 98vw;
+        min-width: 0;
+        height: auto;
+        padding: 8px 2vw;
+    }
+    .numbers, .oprators {
+        height: auto;
+        width: 100%;
+    }
+    .row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
